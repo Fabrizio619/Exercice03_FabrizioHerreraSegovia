@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Exercice03_FabrizioHerreraSegovia/static/css/main.1469173b.chunk.css",
+    "main.js": "/Exercice03_FabrizioHerreraSegovia/static/js/main.944c4898.chunk.js",
+    "main.js.map": "/Exercice03_FabrizioHerreraSegovia/static/js/main.944c4898.chunk.js.map",
+    "runtime-main.js": "/Exercice03_FabrizioHerreraSegovia/static/js/runtime-main.25462a10.js",
+    "runtime-main.js.map": "/Exercice03_FabrizioHerreraSegovia/static/js/runtime-main.25462a10.js.map",
+    "static/js/2.8d3f817f.chunk.js": "/Exercice03_FabrizioHerreraSegovia/static/js/2.8d3f817f.chunk.js",
+    "static/js/2.8d3f817f.chunk.js.map": "/Exercice03_FabrizioHerreraSegovia/static/js/2.8d3f817f.chunk.js.map",
+    "index.html": "/Exercice03_FabrizioHerreraSegovia/index.html",
+    "static/css/main.1469173b.chunk.css.map": "/Exercice03_FabrizioHerreraSegovia/static/css/main.1469173b.chunk.css.map",
+    "static/js/2.8d3f817f.chunk.js.LICENSE.txt": "/Exercice03_FabrizioHerreraSegovia/static/js/2.8d3f817f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.25462a10.js",
+    "static/js/2.8d3f817f.chunk.js",
+    "static/css/main.1469173b.chunk.css",
+    "static/js/main.944c4898.chunk.js"
+  ]
+}
