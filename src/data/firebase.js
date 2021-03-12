@@ -22,18 +22,11 @@ if(!fbAppli.apps.length) {
 }
 
 // Initialiser Firestore
-export const bd = fbAppli.firestore();
+ const bd = fbAppli.firestore();
 /******* Ex#3 - Étape C ********************************/ 
 // Exporter (par défaut) la référence à "bd" pour pouvoir l'utiliser dans le composant ListeProduits
+// export const firestore = firebase.firestore();
+export default bd;
 
 
-// bd.collection("ex3-produits").get().then(
-
-//   reponse => {
-//      reponse.forEach(
-    
-//      )
-//   }
-  
-//   );
-  
+//a mettre dans liste produits

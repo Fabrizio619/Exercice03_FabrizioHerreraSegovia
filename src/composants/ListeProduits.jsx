@@ -3,9 +3,15 @@ import Produit from "./Produit";
 import { useEffect, useState } from 'react';
 /******* Ex#3 - Étape D ********************************/ 
 // Importer l'objet bd du fichier firebase.js
+// import tabProduits from './data/produits.json';
+import bd from '../data/firebase';
+
 // import fbAppli from 'firebase/app';
 // import "firebase/firestore";
-import { firestore } from 'firebase';
+
+// import fbAppli from 'firebase/app';
+// import "firebase/firestore";
+
 
 
 
@@ -27,10 +33,27 @@ export default function ListeProduits(props) {
       // est une Promesse, vous pouvez simplement utiliser la syntax 'await' pour attendre le résultat avant de remplir le tableau tabProduits 
       // (visionnez la capsule au sujet du code asynchrone en JavaScript)]
 
-      const reponse = await firestore.collection('ex3-produits').doc(utilisateur.uid).collection('id').get();
-      reponse.forEach(
-        doss => tabProduits.push(doss.data())
-      );
+
+      // bd.collection("ex3-produits").get().then(
+
+      //      reponse.forEach(
+      //   doss => tabProduits.push(doss.data())
+      // )
+      // );
+
+   
+        
+
+
+      const reponse = await bd.collection("ex3-produits").get().then(
+        reponse => {
+          reponse.forEach(
+            doss => tabProduits.push(doss.data())
+          )
+       }
+       
+       );
+
       setProduits(tabProduits);
       
       /******* Ex#3 - Étape G ********************************/ 
@@ -44,7 +67,7 @@ export default function ListeProduits(props) {
     <div className="ListeProduits">
       <h2>Produits disponibles</h2>
       <ul>        
-        {/*
+{/*         
           ******* Ex#3 - Étape H ******************************** 
           Utiliser la variable d'état des produits pour générer les composants 'Produit' ci-dessous.
           Remarque : Vous pouvez reproduire la solution déjà faite en classe (c'est un trivial copier-coller).
@@ -52,6 +75,13 @@ export default function ListeProduits(props) {
           avoir l'attribut "etatPanier={props.etatPanier}" quand vous les générer ici : encore une fois, regardez 
           le code de l'exercice de classe.
         */}
+
+
+        
+
+{produits.map(prd => 
+    <Produit etatPanier={props.etatPanier} key={prd.id} nom={prd.nom} prix={prd.prix} id={prd.id}/>    
+   )}
 
       </ul>
     </div>
