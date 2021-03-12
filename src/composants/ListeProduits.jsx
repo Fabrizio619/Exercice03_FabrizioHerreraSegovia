@@ -76,7 +76,7 @@ export default function ListeProduits(props) {
           le code de l'exercice de classe.
         */}
 
-
+{/*  */}
         
 
 {produits.map(prd => 
