@@ -1,6 +1,7 @@
 {
   "name": "Exercice03_FabrizioHerreraSegovia",
   "private": true,
+  "homepage": "https://Fabrizio619.github.io/Exercice03_FabrizioHerreraSegovia/",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
@@ -22,7 +23,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "preghdeploy": "npm run build",
-    "ghdeploy": "gh-pages -d build"
+    "ghdeploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
