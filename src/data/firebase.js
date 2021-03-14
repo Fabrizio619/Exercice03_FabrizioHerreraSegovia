@@ -1,5 +1,4 @@
 import fbAppli from 'firebase/app';
-import * as firebaseui from 'firebaseui';
 import 'firebase/firestore';
 
 /******* Ex#3 - Étape B ********************************/ 
@@ -25,8 +24,6 @@ if(!fbAppli.apps.length) {
  const bd = fbAppli.firestore();
 /******* Ex#3 - Étape C ********************************/ 
 // Exporter (par défaut) la référence à "bd" pour pouvoir l'utiliser dans le composant ListeProduits
-// export const firestore = firebase.firestore();
 export default bd;
-
 
 //a mettre dans liste produits

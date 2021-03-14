@@ -2,25 +2,12 @@ import './ListeProduits.scss';
 import Produit from "./Produit";
 import { useEffect, useState } from 'react';
 /******* Ex#3 - Étape D ********************************/ 
-// Importer l'objet bd du fichier firebase.js
-// import tabProduits from './data/produits.json';
 import bd from '../data/firebase';
-
-// import fbAppli from 'firebase/app';
-// import "firebase/firestore";
-
-// import fbAppli from 'firebase/app';
-// import "firebase/firestore";
-
-
-
 
 export default function ListeProduits(props) {
   /******* Ex#3 - Étape E ********************************/ 
   // Créer un "état" React pour les produits (utiliser useState)
-  const [produits, setProduits] = useState([]);
-  // const [utilisateur] = etatUtilisateur;
-  
+  const [produits, setProduits] = useState([]); 
     
   useEffect(() => {
     async function getProduits() {
@@ -32,18 +19,6 @@ export default function ListeProduits(props) {
       // [Suggestion : remarquez que la fonction getProduits() est marquée 'async'. Lorsque vous appelez la méthode Firestore qui retourne les produits, cette fonction 
       // est une Promesse, vous pouvez simplement utiliser la syntax 'await' pour attendre le résultat avant de remplir le tableau tabProduits 
       // (visionnez la capsule au sujet du code asynchrone en JavaScript)]
-
-
-      // bd.collection("ex3-produits").get().then(
-
-      //      reponse.forEach(
-      //   doss => tabProduits.push(doss.data())
-      // )
-      // );
-
-   
-        
-
 
       const reponse = await bd.collection("ex3-produits").get().then(
         reponse => {
@@ -76,7 +51,7 @@ export default function ListeProduits(props) {
           le code de l'exercice de classe.
         */}
 
-{/*  */}
+
         
 
 {produits.map(prd => 
